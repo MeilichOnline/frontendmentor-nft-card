@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
+  <link rel="stylesheet" href="style.css">
+
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -20,15 +22,17 @@
       <picture class="card__image">
         <img src="images/image-equilibrium.jpg" alt="A cube standing on one his edges straigt up. The cube is kinda transparent with red and blue highlights and the background is a craidiant from top to button in dark blue to blue.">
       </picture>
-      <h1 class="card__title"></h1>Equilibrium #3429</h1>
+      <h1 class="card__title">Equilibrium #3429</h1>
       <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
       <div class="card__value">
-        <div class="value__amount">0.041 ETH</div>
-        <div class="value__remaining">3 days left</div>
+        <div class="value__amount" data-icon="icon-ethereum">0.041 ETH</div>
+        <div class="value__remaining" data-icon="icon-clock">3 days left</div>
       </div>
       <hr>
-      <p class="card__creator">
-        <img src="images/image-avatar.png" alt="The profile image of the creator." of Jules Wyvern</p>    
+      <div class="card__creator">
+        <div class="card__creator__image"><img src="images/image-avatar.png"></div>
+        <div style="font-size: 1rem;">Creation of <a href="#" class="card__creator__name">Jules Wyvern</a></div>
+      </div> 
  </article>
   </main>
   <div class="attribution">

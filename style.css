@@ -1,0 +1,115 @@
+:root {
+    --clr-primary: hsl(215, 51%, 70%);
+    --clr-secundary: hsl(178, 100%, 50%);
+
+    --clr-main-bg: hsl(217, 54%, 11%);
+    --clr-card-bg: hsl(216, 50%, 16%);
+    --clr-card-line: hsl(215, 32%, 27%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ffamily: 'Outfit', sans-serif;
+    --fsize-base: 18px;
+    --fweight-300: 300;
+    --fweight-400: 400;
+    --fweight-600: 600; 
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body,
+.container {
+    height: 100%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 0.6rem;
+}
+
+body {
+    background-color: var(--clr-main-bg);
+    color: var(--clr-secundary);    
+    font-family: var(--ffamily);
+    font-size: 1rem;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    max-width: 370px;
+    background-color: var(--clr-card-bg);
+    color: var(--clr-primary);
+    padding: 1.725rem;
+    margin: 0 1.725rem 0 1.725rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+    box-shadow: inset;
+}
+
+.card__title {
+    color: var(--clr-white);
+}
+
+.card__value {
+    display: flex;
+    justify-content: space-between;
+    filter: blur(0.5px);
+}
+
+.value__amount {
+    color: var(--clr-secundary);
+    font-weight: var(--fweight-600);
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.value__amount[data-icon="icon-ethereum"]::before {
+    content: '';
+    background: url("images/icon-ethereum.svg");
+    width: 11px;
+    height: 18px;
+}
+
+.value__remaining {
+    font-weight: var(--fweight-400);
+    display: inline-flex;
+    gap: 0.5rem;
+}
+
+.value__remaining[data-icon="icon-clock"]::before {
+    content: '';
+    background: url("images/icon-clock.svg");
+    width: 17px;
+    height: 17px;
+}
+
+.card__creator {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card__creator__image {
+    width: 2.125rem;
+    height: 2.125rem;
+    border: solid 1px white;
+    border-radius: 2.125rem;
+}
+
+.card__creator__name {
+    color: var(--clr-white);
+}
+
+.card__creator__name:is(:hover, :focus) {
+    color: var(--clr-secundary);
+}
+
+
