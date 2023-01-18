@@ -8,6 +8,10 @@
   
   <link rel="stylesheet" href="style.css">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,8 +23,15 @@
 <body>
   <main class="container">
     <article class="card">
-      <picture class="card__image">
-        <img src="images/image-equilibrium.jpg" alt="A cube standing on one his edges straigt up. The cube is kinda transparent with red and blue highlights and the background is a craidiant from top to button in dark blue to blue.">
+      <picture>
+        <div class="card__image">
+          <div class="card__image__normal">          
+            <img src="images/image-equilibrium.jpg" alt="A cube standing on one his edges straigt up. The cube is kinda transparent with red and blue highlights and the background is a craidiant from top to button in dark blue to blue.">
+          </div>
+          <div class="card__image__hover">          
+            <img class="svg_view" src="images/icon-view.svg" alt="Image overlay image, white eye on turquoisish transparent background.">
+          </div>
+        </div>
       </picture>
       <h1 class="card__title">Equilibrium #3429</h1>
       <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
