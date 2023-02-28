@@ -2,38 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100&display=swap" rel="stylesheet">
   <title>Frontend Mentor | NFT preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <main class="container">
     <article class="card">
-      <picture class="card__image">
-        <img src="images/image-equilibrium.jpg" alt="A cube standing on one his edges straigt up. The cube is kinda transparent with red and blue highlights and the background is a craidiant from top to button in dark blue to blue.">
+      <picture>
+        <div class="card__image">
+          <div class="card__image__normal">          
+            <img src="images/image-equilibrium.jpg" alt="A cube standing on one his edges straigt up.">
+          </div>
+          <div class="card__image__hover">          
+            <img class="svg_view" src="images/icon-view.svg" alt="Overlay image, white eye on turquoisish transparent background.">
+          </div>
+        </div>
       </picture>
-      <h1 class="card__title"></h1>Equilibrium #3429</h1>
+      <h1 class="card__title">Equilibrium #3429</h1>
       <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
       <div class="card__value">
-        <div class="value__amount">0.041 ETH</div>
-        <div class="value__remaining">3 days left</div>
+        <div class="value__amount" data-icon="icon-ethereum">0.041 ETH</div>
+        <div class="value__remaining" data-icon="icon-clock">3 days left</div>
       </div>
       <hr>
-      <p class="card__creator">
-        <img src="images/image-avatar.png" alt="The profile image of the creator." of Jules Wyvern</p>    
+      <div class="card__creator">
+        <div class="card__creator__image"><img src="images/image-avatar.png"></div>
+        <div style="font-size: 1rem;">Creation of <a href="#" class="card__creator__name">Jules Wyvern</a></div>
+      </div> 
  </article>
   </main>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
 </body>
 </html>
